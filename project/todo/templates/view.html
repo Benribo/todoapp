@@ -1,0 +1,14 @@
+<h1>hi</h1>
+
+
+<form action= '/addTodo/' method= "post">{% csrf_token %}
+<input type ="text" name="content" />
+<input type="submit" value="Add" />
+</form>
+
+<ul>
+    {% for TodoItem in all_items %}
+        <li>{{ TodoItem.content }}</li>
+    {% endfor %}    
+
+</ul>
